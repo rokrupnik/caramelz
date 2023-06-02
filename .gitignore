@@ -22,3 +22,8 @@ pnpm-debug.log*
 # VS code and Jetbrains IDEs specific files
 .idea/
 .vscode/
+
+# Custom
+README.md
+public/astrolus-dark.png
+public/astrolus-light.png
