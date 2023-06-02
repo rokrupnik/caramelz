@@ -19,7 +19,7 @@ import Container from "./Container.astro";
         </p>
         <form
           netlify
-          netlify-honeypot
+          netlify-honeypot="bot-field"
           name="contact"
           method="POST"
           action="/success"
@@ -31,7 +31,7 @@ import Container from "./Container.astro";
             <input
               type="hidden"
               name="subject"
-              value="Sales inquiry from caramelz.store (%{submissionId})"
+              value="Sales inquiry from caramelz.store - %{submissionId}"
             />
             <input type="hidden" name="form-name" value="contact" />
           </p>
