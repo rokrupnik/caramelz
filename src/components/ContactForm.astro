@@ -17,6 +17,12 @@ import Container from "./Container.astro";
           Got a technical issue? Want to send feedback about a beta feature?
           Need details about our Business plan? Let us know.
         </p>
+
+        <script type="text/javascript">
+          function updateSubject(valEmail) {
+            document.getElementById("subject").value = "Contact inquiry #%{submissionId} from caramelz.store by " + valEmail;
+          }
+        </script>
         <form
           netlify
           netlify-honeypot="bot-field"
@@ -30,8 +36,9 @@ import Container from "./Container.astro";
             </label>
             <input
               type="hidden"
+              id="subject"
               name="subject"
-              value="Contact inquiry #%{submissionId} from caramelz.store - %{name} <%{email}>"
+              value="Contact inquiry #%{submissionId} from caramelz.store"
             />
             <input type="hidden" name="form-name" value="contact" />
           </p>
@@ -62,6 +69,7 @@ import Container from "./Container.astro";
               name="email"
               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="your@awesome.site"
+              onchange="updateSubject(this.value)"
               required
             />
           </div>
