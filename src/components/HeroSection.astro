@@ -41,7 +41,7 @@ import '../../node_modules/tiny-slider/dist/tiny-slider.css'
     </div>
   </Container>
 
-  <div id="covers-carousel" class="my-20 flex space-x-20 overflow-x-auto no-scrollbar">
+  <div id="covers-carousel" class="my-20 flex overflow-x-auto no-scrollbar">
     <img src="/images/covers/in-stock/01.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
     <img src="/images/covers/in-stock/02.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
     <img src="/images/covers/in-stock/03.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
@@ -58,27 +58,28 @@ import '../../node_modules/tiny-slider/dist/tiny-slider.css'
     var slider = tns({
       "container": "#covers-carousel",
       "controls": false,
-      "startIndex": 1,
+      // "startIndex": 1,
       "items": 4,
       "responsive": {
         "100": {
           "items": 1,
-          // "edgePadding": 30
+          "gutter": 40,
+          "edgePadding": 80
         },
-        "300": {
+        // "300": {
+        //   "items": 2,
+        //   // "edgePadding": -200
+        // },
+        "480": {
           "items": 2,
-          // "edgePadding": 30
+          "edgePadding": 100
         },
-        "500": {
+        "768": {
           "items": 3,
           // "edgePadding": 50
         },
-        "900": {
+        "1024": {
           "items": 4,
-          // "edgePadding": 50
-        },
-        "1300": {
-          "items": 5,
           // "edgePadding": 50
         }
       },
