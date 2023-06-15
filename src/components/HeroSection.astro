@@ -1,6 +1,7 @@
 ---
 import Container from "./Container.astro"
 
+import '../../node_modules/tiny-slider/dist/tiny-slider.css'
 ---
 
 <div class="relative" id="home">
@@ -54,7 +55,7 @@ import Container from "./Container.astro"
     </div>
   </Container>
 
-  <div class="my-20 flex space-x-20" style="transform: translateX(-180px);">
+  <div id="covers-carousel" class="mt-20 flex space-x-20 overflow-x-auto no-scrollbar">
     <img src="/images/covers/in-stock/01.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
     <img src="/images/covers/in-stock/02.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
     <img src="/images/covers/in-stock/03.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
@@ -63,4 +64,40 @@ import Container from "./Container.astro"
     <img src="/images/covers/in-stock/06.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
     <img src="/images/covers/in-stock/07.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
   </div>
+
+  <script>
+    // Import npm modules.
+    import { tns } from 'tiny-slider';
+
+    var slider = tns({
+      "container": "#covers-carousel",
+      "controls": false,
+      "startIndex": 1,
+      "items": 4,
+      "responsive": {
+        "100": {
+          "items": 1,
+          // "edgePadding": 30
+        },
+        "300": {
+          "items": 2,
+          // "edgePadding": 30
+        },
+        "500": {
+          "items": 3,
+          // "edgePadding": 50
+        },
+        "900": {
+          "items": 4,
+          // "edgePadding": 50
+        }
+      },
+      "slideBy": "page",
+      "mouseDrag": true,
+      "swipeAngle": false,
+      "speed": 400,
+      "lazyload": true,
+      // "edgePadding": -50,
+    });
+  </script>
 </div>
