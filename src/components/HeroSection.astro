@@ -41,7 +41,12 @@ import '../../node_modules/tiny-slider/dist/tiny-slider.css'
     </div>
   </Container>
 
-  <div id="covers-carousel" class="mb-20 mt-10 md:mt-20 flex overflow-x-auto no-scrollbar">
+  <a
+    id="covers-carousel"
+    href="/pdf/CaramelzCatalogue2023.pdf"
+    target="_blank"
+    class="block mb-20 mt-10 md:mt-20 flex overflow-x-auto no-scrollbar hidden"
+  >
     <img src="/images/covers/in-stock/01.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
     <img src="/images/covers/in-stock/02.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
     <img src="/images/covers/in-stock/03.webp" alt="Caramelz - ski goggle covers" width="375" height="209" loading="lazy"/>
@@ -59,7 +64,14 @@ import '../../node_modules/tiny-slider/dist/tiny-slider.css'
       "container": "#covers-carousel",
       "controls": false,
       // "startIndex": 1,
-      "items": 4,
+      // "slideBy": "page",
+      "mouseDrag": true,
+      "swipeAngle": false,
+      "speed": 400,
+      "lazyload": true,
+      "autoplay": true,
+      "autoplayHoverPause": true,
+      "autoplayTimeout": 2000,
       "responsive": {
         "100": {
           "items": 1,
@@ -83,13 +95,9 @@ import '../../node_modules/tiny-slider/dist/tiny-slider.css'
           // "edgePadding": 50
         }
       },
-      "slideBy": "page",
-      "mouseDrag": true,
-      "swipeAngle": false,
-      "speed": 400,
-      "lazyload": true,
-      // "edgePadding": -50,
     });
+
+    document.getElementById('covers-carousel').classList.remove('hidden')
   </script>
 
 
