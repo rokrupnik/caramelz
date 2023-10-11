@@ -18,7 +18,7 @@ import Container from "./Container.astro";
 
       <script type="text/javascript">
         function updateSubject(valEmail) {
-          document.getElementById("subject").value = "Contact inquiry #%{submissionId} from caramelz.store by " + valEmail;
+          document.getElementById("subject").value = "Contact inquiry #%{submissionId} from caramelz.eu by " + valEmail;
         }
       </script>
       <form
@@ -37,7 +37,7 @@ import Container from "./Container.astro";
             id="subject"
             name="subject"
             data-remove-prefix
-            value="Contact inquiry #%{submissionId} from caramelz.store"
+            value="Contact inquiry #%{submissionId} from caramelz.eu"
           />
           <input type="hidden" name="form-name" value="contact" />
         </p>
