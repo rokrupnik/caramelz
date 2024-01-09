@@ -1,0 +1,39 @@
+
+---
+import Container from "./Container.astro"
+
+import '../../node_modules/tiny-slider/dist/tiny-slider.css'
+---
+
+<div class="relative" id="home">
+    <!-- <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+    </div> -->
+  <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+    <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-secondary dark:from-blue-700"></div>
+    <div class="blur-[106px] h-32 bg-gradient-to-r from-primary to-secondary dark:to-indigo-600"></div>
+  </div>
+  <Container>
+    <div class="relative pt-36 ml-auto flex items-center justify-center">
+      <div class="container mx-auto px-4 py-8 flex flex-col lg:flex-row items-center">
+        <!-- Image Section (Left) -->
+        <div class="lg:w-1/2 mb-4 lg:mb-0">
+          <img src="images/hero_image.webp" alt="Caramelz Goggle cover use case" class="hero-image rounded-lg shadow-lg" width="584" height="584">
+        </div>
+        
+        <!-- Text Section (Right) -->
+        <div class="lg:w-1/2 lg:ml-8">
+          <h1 class="text-gray-900 dark:text-white font-bold text-5xl mb-6 text-center">Your Goggles' Best Friend<br>on and off the Slopes!</h1>
+          <p class="text-lg mb-6 text-gray-700 dark:text-gray-300 text-center">At Caramelz, we understand the passion and investment you put into your winter sports gear, especially your beloved goggles ...</p>
+          <a href="#"
+            class="relative m-auto flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+            <span class="relative flex text-base font-semibold text-white dark:text-dark">SHOP NOW!</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </Container>
+
+  
+</div>

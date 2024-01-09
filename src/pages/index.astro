@@ -1,23 +1,18 @@
 ---
-import Stats from '../components/Stats.astro';
 import Features from '../components/Features.astro';
-import HeroSection from '../components/HeroSection.astro';
+import HeroSectionUgc from '../components/HeroSectionUgc.astro';
 import Layout from '../layouts/Layout.astro';
-import Testimonials from '../components/Testimonials.astro';
-import CallToAction from '../components/CallToAction.astro';
-import Blog from '../components/Blog.astro';
+import Ugc from '../components/Ugc.astro';
+import CallToActionB2C from '../components/CallToActionB2C.astro';
 import ContactForm from '../components/ContactForm.astro';
-import Pricing from '../components/Pricing.astro';
 ---
 
-<Layout title="">
-	<main class="space-y-10 lg:space-y-40 md:space-y-20 mb-40">
-		<HeroSection/>
-		<Pricing/>
-		<!-- <Features/> -->
-		<!-- <Stats/> -->
-		<!-- <Testimonials/> -->
-		<CallToAction/>
+<Layout title="" id="index">
+	<main class="space-y-10 md:space-y-20 mb-40">
+		<HeroSectionUgc/>
+		<Features/>
+		<CallToActionB2C/>
+		<Ugc/>
 		<ContactForm/>
 	</main>
 </Layout>

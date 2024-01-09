@@ -1,0 +1,34 @@
+---
+import Container from "./Container.astro"
+
+---
+
+<div class="relative py-4">
+  <div aria-hidden="true" class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+    <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-secondary dark:from-blue-700"></div>
+    <div class="blur-[106px] h-32 bg-gradient-to-r from-primary to-secondary dark:to-indigo-600"></div>
+  </div>
+  <Container>
+    <div class="relative">
+      <div class="mt-6 m-auto md:w-8/12 lg:w-7/12">
+        <p class="text-center text-xl font-bold text-gray-900 dark:text-gray-300 mb-2">
+          Investing in Caramelz goggle covers is not just about safeguarding your eyewear; it's a commitment
+          to keeping your gear in pristine condition.</p>
+        <p class="text-center text-xl text-gray-700 dark:text-gray-300 mb-6">Enjoy the slopes, embrace the thrill, and let your Caramelz
+          goggle covers add a touch of style to your winter sports adventures!
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a
+              href="#"
+              target=""
+              class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+            >
+              <span class="relative flex text-base font-semibold text-white dark:text-dark">
+                <span class="my-auto">Order yours today!</span>
+              </span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>

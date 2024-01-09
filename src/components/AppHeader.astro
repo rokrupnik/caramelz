@@ -1,6 +1,12 @@
 ---
 import Container from "./Container.astro";
 
+export interface Props {
+  id: string
+}
+
+const { id } = Astro.props as Props;
+
 ---
 
 <header>
@@ -40,12 +46,14 @@ import Container from "./Container.astro";
                                     <span>Features</span>
                                 </a>
                             </li> -->
+                            {
+                            (id === 'b2b') &&
                             <li>
                                 <a href="#pricing" class="block md:px-4 transition hover:text-primary" onclick="closeNav()">
                                     <span>Pricing</span>
                                 </a>
                             </li>
-                            </li>
+                            }
                             <li>
                                 <a href="/pdf/CaramelzCatalogue2023.pdf" target="_blank" class="flex md:px-4 transition hover:text-primary">
                                     <span>Catalogue</span>
