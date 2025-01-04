@@ -11,8 +11,5 @@ export default defineConfig({
     config: { applyBaseStyles: false },
   })],
   output: "hybrid",
-  experimental: {
-    hybridOutput: true,
-  },
   adapter: netlify()
 });
